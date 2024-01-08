@@ -1,29 +1,29 @@
-import Image from "next/image";
-import config from "@/config";
-
 // The list of your testimonials. It needs 3 items to fill the row.
 const list = [
   {
     // Optional, use for social media like Twitter. Does not link anywhere but cool to display
-    username: "marclou",
+    username: "OwenLeeScott",
     // REQUIRED
-    name: "Marc Lou",
+    name: "Owen Lee Scott",
     // REQUIRED
-    text: "Really easy to use. The tutorials are really useful and explains how everything works. Hope to ship my next project really fast!",
+    text: "If you're interested in cutting out the jargon and gaining the technical knowledge to bring your ideas into reality, this really is the place to be",
     // Optional, a statically imported image (usually from your public folder—recommended) or a link to the person's avatar. Shows a fallback letter if not provided
-    img: "https://pbs.twimg.com/profile_images/1514863683574599681/9k7PqDTA_400x400.jpg",
+    // img: "https://pbs.twimg.com/profile_images/1514863683574599681/9k7PqDTA_400x400.jpg",
+    rating: 5,
   },
   {
-    username: "the_mcnaveen",
-    name: "Naveen",
-    text: "Setting up everything from the ground up is a really hard, and time consuming process. What you pay for will save your time for sure.",
+    username: "LizzieMushangwe",
+    name: "Lizzie M",
+    text: "In the span of a month I've been exposed to all of the essential technical skills required to be a fullstack AI engineer",
+    rating: 5,
   },
   {
-    username: "wahab",
-    name: "Wahab Shaikh",
-    text: "Easily saves 15+ hrs for me setting up trivial stuff. Now, I can directly focus on shipping features rather than hours of setting up the same technologies from scratch. Feels like a super power! :D",
+    username: "MauroM",
+    name: "Mauro",
+    text: "I've learnt more in the past month than I learnt throughout my entire degree. The difference is that I'm actually going to be using all of this new stuff.",
+    rating: 5,
   },
-];
+]; 
 
 // A single testimonial, to be rendered in  a list
 const Testimonial = ({ i }) => {
@@ -39,32 +39,37 @@ const Testimonial = ({ i }) => {
             {testimonial.text}
           </p>
         </blockquote>
-        <figcaption className="relative flex items-center justify-start gap-4 pt-4 mt-4 md:gap-8 md:pt-8 md:mt-8 border-t border-base-content/5">
-          <div className="w-full flex items-center justify-between gap-2">
+        <figcaption className="relative flex items-center justify-center gap-4 pt-4 mt-4 md:gap-8 md:pt-8 md:mt-8 border-t border-base-content/5">
+          <div className="w-full flex items-center justify-center gap-2">
             <div>
               <div className="font-medium text-base-content md:mb-0.5">
                 {testimonial.name}
+              </div>
+              <div className="flex flex-col justify-center items-center md:items-start gap-1">
+                <div className="rating">
+                  {[...Array(5)].map((_, starIndex) => (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill={testimonial.rating > starIndex ? "currentColor" : "none"}
+                      className="w-5 h-5 text-yellow-500"
+                      key={i}
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  ))}
+                </div>
               </div>
               {testimonial.username && (
                 <div className="mt-0.5 text-sm text-base-content/80">
                   @{testimonial.username}
                 </div>
-              )}
-            </div>
 
-            <div className="overflow-hidden rounded-full bg-base-300 shrink-0">
-              {testimonial.img ? (
-                <Image
-                  className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover"
-                  src={list[i].img}
-                  alt={`${list[i].name}'s testimonial for ${config.appName}`}
-                  width={48}
-                  height={48}
-                />
-              ) : (
-                <span className="w-10 h-10 md:w-12 md:h-12 rounded-full flex justify-center items-center text-lg font-medium bg-base-300">
-                  {testimonial.name.charAt(0)}
-                </span>
+
               )}
             </div>
           </div>
@@ -74,21 +79,22 @@ const Testimonial = ({ i }) => {
   );
 };
 
-const Testimonials3 = () => {
+const Testimonials = () => {
   return (
     <section id="testimonials">
       <div className="py-24 px-8 max-w-7xl mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
           <div className="mb-8">
             <h2 className="sm:text-5xl text-4xl font-extrabold text-base-content">
-              212 makers are already shipping faster!
+              An alternate trajectory to success.
             </h2>
           </div>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-base-content/80">
-            Don&apos;t take our word for it. Here&apos;s what they have to say
-            about ShipFast.
+            Apply to join 100+ members who have this to say...
           </p>
         </div>
+
+
 
         <ul
           role="list"
@@ -103,4 +109,4 @@ const Testimonials3 = () => {
   );
 };
 
-export default Testimonials3;
+export default Testimonials;

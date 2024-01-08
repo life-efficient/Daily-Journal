@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { authors, articles } from "../../_assets/content";
 import CardArticle from "../../_assets/components/CardArticle";
-import { getSEOTags } from "@/libs/seo";
+import { getSEOTags } from "@/utils/seo";
 import config from "@/config";
 
 export async function generateMetadata({ params }) {

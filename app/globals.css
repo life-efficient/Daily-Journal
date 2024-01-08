@@ -7,6 +7,10 @@ body {
   scroll-behavior: smooth !important;
 }
 
+h1 { 
+  font-family: 'Krona One', sans-serif;
+}
+
 /* It makes the HTML progress bar filling smooth when value change. */
 progress::-webkit-progress-value {
   transition: 0.6s width ease-out;

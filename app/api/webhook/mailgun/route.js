@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { sendEmail } from "@/libs/mailgun";
+import { sendEmail } from "@/utils/mailgun";
 import config from "@/config";
 
 // This route is used to receive emails from Mailgun and forward them to our customer support email.

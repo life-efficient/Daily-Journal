@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth/next";
-import { authOptions } from "@/libs/next-auth";
-import { createCheckout } from "@/libs/stripe";
-import connectMongo from "@/libs/mongoose";
+import { authOptions } from "@/utils/next-auth";
+import { createCheckout } from "@/utils/stripe";
+import connectMongo from "@/utils/mongoose";
 import User from "@/models/User";
 
 // This function is used to create a Stripe Checkout Session (one-time payment or subscription)

@@ -63,8 +63,10 @@ const TestimonialsAvatars = ({ priority = false }) => {
         </div>
 
         <div className="text-base text-base-content/80">
-          <span className="font-semibold text-base-content">32</span> makers
-          ship faster
+          Join more than 100 members
+          {/* Endless conversations with */}
+          {/* <span className="font-semibold text-base-content"> experts! </span> */}
+
         </div>
       </div>
     </div>

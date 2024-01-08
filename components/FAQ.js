@@ -7,23 +7,33 @@ import { useRef, useState } from "react";
 
 const faqList = [
   {
-    question: "What do I get exactly?",
-    answer: <div className="space-y-2 leading-relaxed">Loreum Ipseum</div>,
+    question: "Who can join?",
+    answer: <div className="space-y-2 leading-relaxed">
+      Parapet is currently only offered to those who have graduated from (or are studying at) one of the &quot;Global Ivy League&quot; universities at which the founding team at Parapet has delivered guest workshops. 
+      We believe that this is necessary to initialise a strong in-person community core at each institution.
+
+      Currently, that list includes:
+      - University of Oxford
+      - University of Cambridge
+      - Harvard University
+      - Imperial College London
+
+      If you&apos;re interested in seeing Parapet at your university, please reach out to us at <a href="mailto:harry@parapet.org">harry@parapet.org</a>
+    </div>,
   },
   {
-    question: "Can I get a refund?",
-    answer: (
-      <p>
-        Yes! You can request a refund within 7 days of your purchase. Reach out
-        by email.
-      </p>
-    ),
-  },
-  {
-    question: "I have another question",
-    answer: (
-      <div className="space-y-2 leading-relaxed">Cool, contact us by email</div>
-    ),
+    question: "What's the commitment?",
+    answer: <div className="space-y-2 leading-relaxed">
+      Every evening at 8pm UTC (UK time), members meet online.
+
+      The format is open for everyone to work on their current tasks.
+      
+      This is not compulsory, or structured.
+      
+      Judging from our experience, consistency is essential to success. Members who best succeed are those who attend almost every evening session. 
+    
+      Becoming an excellent technical founder is a marathon, not a sprint.
+    </div>,
   },
 ];
 
@@ -56,18 +66,16 @@ const Item = ({ item }) => {
             width="16"
             height="2"
             rx="1"
-            className={`transform origin-center transition duration-200 ease-out ${
-              isOpen && "rotate-180"
-            }`}
+            className={`transform origin-center transition duration-200 ease-out ${isOpen && "rotate-180"
+              }`}
           />
           <rect
             y="7"
             width="16"
             height="2"
             rx="1"
-            className={`transform origin-center rotate-90 transition duration-200 ease-out ${
-              isOpen && "rotate-180 hidden"
-            }`}
+            className={`transform origin-center rotate-90 transition duration-200 ease-out ${isOpen && "rotate-180 hidden"
+              }`}
           />
         </svg>
       </button>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getSEOTags } from "@/libs/seo";
+import { getSEOTags } from "@/utils/seo";
 import config from "@/config";
 
 // CHATGPT PROMPT TO GENERATE YOUR PRIVACY POLICY — replace with your own data 👇
@@ -12,7 +12,7 @@ import config from "@/config";
 // You are an excellent lawyer.
 
 // I need your help to write a simple privacy policy for my website. Here is some context:
-// - Website: https://shipfa.st
+// - Website: https://parapet.org
 // - Name: ShipFast
 // - Description: A JavaScript code boilerplate to help entrepreneurs launch their startups faster
 // - User data collected: name, email and payment information
@@ -21,7 +21,7 @@ import config from "@/config";
 // - Data sharing: we do not share the data with any other parties
 // - Children's Privacy: we do not collect any data from children
 // - Updates to the Privacy Policy: users will be updated by email
-// - Contact information: marc@shipfa.st
+// - Contact information: marc@parapet.org
 
 // Please write a simple privacy policy for my site. Add the current date.  Do not add or explain your reasoning. Answer:
 
@@ -59,8 +59,9 @@ const PrivacyPolicy = () => {
         >
           {`Last Updated: 2023-08-25
 
-Thank you for visiting ShipFast ("we," "us," or "our"). This Privacy Policy outlines how we collect, use, and protect your personal and non-personal information when you use our website located at https://shipfa.st (the "Website").
-
+Thank you for visiting Convospace ("we," "us," or "our"). This Privacy Policy outlines how we collect, use, and protect your personal and non-personal information when you use our website located at https://life-efficient.github
+.io/Convospace.
+1
 By accessing or using the Website, you agree to the terms of this Privacy Policy. If you do not agree with the practices described in this policy, please do not use the Website.
 
 1. Information We Collect
@@ -87,21 +88,24 @@ We do not share your personal data with any third parties except as required for
 
 4. Children's Privacy
 
-ShipFast is not intended for children under the age of 13. We do not knowingly collect personal information from children. If you are a parent or guardian and believe that your child has provided us with personal information, please contact us at the email address provided below.
+Convospace is not intended for children under the age of 13. We do not knowingly collect personal information from children. If you are a parent or guardian and believe that your child has provided us with personal information, please contact us at the email address provided below.
 
 5. Updates to the Privacy Policy
 
 We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. Any updates will be posted on this page, and we may notify you via email about significant changes.
 
-6. Contact Information
+`
+            // 6. Contact Information
 
-If you have any questions, concerns, or requests related to this Privacy Policy, you can contact us at:
+            // If you have any questions, concerns, or requests related to this Privacy Policy, you can contact us at:
 
-Email: marc@shipfa.st
+            // Email: marc@parapet.org
 
-For all other inquiries, please visit our Contact Us page on the Website.
+            // For all other inquiries, please visit our Contact Us page on the Website.
 
-By using ShipFast, you consent to the terms of this Privacy Policy.`}
+            // By using ShipFast, you consent to the terms of this Privacy Policy.
+
+          }
         </pre>
       </div>
     </main>
